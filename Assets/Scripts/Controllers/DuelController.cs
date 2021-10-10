@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class DuelController : MonoBehaviour
 {
-    public DuelData duelData;
+    [SerializeField]
+    public DuelDataSO duelData;
+    [SerializeField]
+    public ScoreSO score;
 
     void Awake()
     {
         duelData.Setup();
+        score.Reset();
     }
-
-    void OnEnable()
-    {
-
+    void OnEnable() {
+        duelData.Randomize();
     }
 }

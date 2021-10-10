@@ -17,7 +17,8 @@ public class Sentences
 }
 
 [System.Serializable]
-public class DuelData
+[CreateAssetMenu(fileName = "DuelDataSO", menuName = "ScriptableObjects/DuelDataSO", order = 1)]
+public class DuelDataSO : ScriptableObject
 {
     [SerializeField]
     public TextAsset duelDataJSON;
@@ -25,10 +26,10 @@ public class DuelData
 
     public void Setup(){
         sentencesInJSON = JsonUtility.FromJson<Sentences>(duelDataJSON.text);
-        foreach (Sentence sentence in sentencesInJSON.sentences)
+        /*foreach (Sentence sentence in sentencesInJSON.sentences)
         {
             Debug.Log(sentence.Insulto + "->" + sentence.Respuesta);
-        }
+        }*/
     }
 
     public void Randomize(){
