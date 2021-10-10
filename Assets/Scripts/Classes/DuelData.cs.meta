@@ -3,7 +3,8 @@ guid: 215146ecb3881fc4b82696ac00a02a86
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - duelDataJSON: {fileID: 4900000, guid: 19f7ea2cd2439664295cfc26fa9e5708, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
