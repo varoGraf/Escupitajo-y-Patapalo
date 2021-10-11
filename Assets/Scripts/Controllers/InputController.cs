@@ -13,6 +13,7 @@ public class InputController : MonoBehaviour
     public UnityEvent onArrowRight;
 
     public UnityEvent onSpace;
+    public UnityEvent onEscape;
 
     private void Update()
     {
@@ -41,5 +42,11 @@ public class InputController : MonoBehaviour
             if (debug) Debug.Log("Space pressed");
             onSpace.Invoke();
         }
+        if (Input.GetButtonDown("Escape"))
+        {
+            if (debug) Debug.Log("Escape pressed");
+            onEscape.Invoke();
+        }
+
     }
 }

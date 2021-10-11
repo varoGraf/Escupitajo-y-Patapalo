@@ -20,27 +20,24 @@ public class Sentences
 [CreateAssetMenu(fileName = "DuelDataSO", menuName = "ScriptableObjects/DuelDataSO", order = 1)]
 public class DuelDataSO : ScriptableObject
 {
-    [SerializeField]
     public TextAsset duelDataJSON;
     public Sentences sentencesInJSON;
 
-    public void Setup(){
+    public void Setup()
+    {
         sentencesInJSON = JsonUtility.FromJson<Sentences>(duelDataJSON.text);
-        /*foreach (Sentence sentence in sentencesInJSON.sentences)
-        {
-            Debug.Log(sentence.Insulto + "->" + sentence.Respuesta);
-        }*/
     }
 
-    public void Randomize(){
+    public void Randomize()
+    {
         Sentence tempGO;
-        for (int i = 0; i < sentencesInJSON.sentences.Length - 1; i++) 
-          {
-              int rnd = Random.Range(i, sentencesInJSON.sentences.Length);
-              tempGO = sentencesInJSON.sentences[rnd];
-              sentencesInJSON.sentences[rnd] = sentencesInJSON.sentences[i];
-              sentencesInJSON.sentences[i] = tempGO;
-          }
+        for (int i = 0; i < sentencesInJSON.sentences.Length - 1; i++)
+        {
+            int rnd = Random.Range(i, sentencesInJSON.sentences.Length);
+            tempGO = sentencesInJSON.sentences[rnd];
+            sentencesInJSON.sentences[rnd] = sentencesInJSON.sentences[i];
+            sentencesInJSON.sentences[i] = tempGO;
+        }
     }
 }
 
