@@ -13,7 +13,7 @@ public class PirateSO : ScriptableObject
         AnimationClip animationClip = null;
         foreach (AnimationClip clip in animations)
         {
-            if (clip.name.Equals(name)) animationClip = clip; break;
+            if (name.Equals(clip.name)) { animationClip = clip; break; }
         }
         return animationClip;
     }

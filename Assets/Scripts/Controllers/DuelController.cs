@@ -14,7 +14,17 @@ public class DuelController : MonoBehaviour
         duelData.Setup();
         score.Reset();
     }
-    void OnEnable() {
+    void OnEnable()
+    {
         duelData.Randomize();
+    }
+
+    public void increaseScore()
+    {
+        score.increaseScore();
+    }
+    public void decreaseScore()
+    {
+        score.decreaseScore();
     }
 }
