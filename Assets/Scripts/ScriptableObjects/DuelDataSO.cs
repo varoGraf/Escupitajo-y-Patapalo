@@ -50,6 +50,13 @@ public class DuelDataSO : ScriptableObject
         return sentencesInJSON.sentences[numRand].Insulto;
     }
 
+    public string getRandomAnswer()
+    {
+        int numRand = Random.Range(0, sentencesInJSON.sentences.Length);
+        return sentencesInJSON.sentences[numRand].Respuesta;
+    }
+
+
     public bool Argument(string insulto, string respuesta)
     {
         bool result = false;

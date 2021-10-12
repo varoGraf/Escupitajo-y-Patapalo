@@ -8,7 +8,7 @@ public class CustomParallaxEffect : MonoBehaviour
     private Camera cam;
     public float parallaxEffect;
     public float speed = 0.001f;
-    private float camSize, camPos;
+    private float camPos;
     private float parentPos;
 
     void Start()

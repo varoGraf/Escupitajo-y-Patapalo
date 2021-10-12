@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pirateName: Player
   animations: []
+  standingSprite: {fileID: 3759135295353733815, guid: 13108a656d6d27b46a0d7c3b9066a0d3, type: 3}
+  headStandingSprite: {fileID: -2022177773527546414, guid: 13108a656d6d27b46a0d7c3b9066a0d3, type: 3}
