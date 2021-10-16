@@ -26,10 +26,16 @@ public class DuelDataSO : ScriptableObject
     public Sentences sentencesInJSON;
     public PirateSO player, npc;
     public UnityEvent onPlayerPoint, onNPCPoint;
+    private bool turn;//turn=true=player ; turn=false=npc ;
 
     public void Setup()
     {
         sentencesInJSON = JsonUtility.FromJson<Sentences>(duelDataJSON.text);
+        if (Random.Range(0, 2) == 0)
+        {
+            turn = true;
+        }
+        else { turn = false; }
     }
 
     public void Randomize()
@@ -86,6 +92,11 @@ public class DuelDataSO : ScriptableObject
     public Sentence[] getSentences()
     {
         return sentencesInJSON.sentences;
+    }
+
+    public bool getTurn()
+    {
+        return turn;
     }
 }
 
