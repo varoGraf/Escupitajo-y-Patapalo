@@ -9,7 +9,7 @@ public class MenuStartController : MonoBehaviour
     [SerializeField] bool keyDown;
     [SerializeField] RectTransform rectTransform;
     public bool isPressUp, isPressDown, isPressConfirm;
-    public AudioSource audio;
+    public AudioSource audio, audio1;
     int VerticalMovement;
 
     void Start()
@@ -56,6 +56,7 @@ public class MenuStartController : MonoBehaviour
         if (!isPressUp && !isPressDown) VerticalMovement = 0;
         if (Input.GetButtonDown("Space"))
         {
+            audio1.Play();
             isPressConfirm = true;
         }
         Debug.Log(index);

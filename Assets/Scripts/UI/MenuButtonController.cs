@@ -17,7 +17,7 @@ public class MenuButtonController : MonoBehaviour
     public bool isPressUp, isPressDown, isPressConfirm;
     int VerticalMovement;
     bool turn;
-    public AudioSource audio;
+    public AudioSource audio, audio1;
 
     public void Init()
     {
@@ -93,6 +93,7 @@ public class MenuButtonController : MonoBehaviour
         if (!isPressUp && !isPressDown) VerticalMovement = 0;
         if (Input.GetButtonDown("Space"))
         {
+            audio1.Play();
             if (turn)
             {
                 duelData.setPlayerSentence(sentences[index].Insulto);
