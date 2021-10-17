@@ -42,6 +42,7 @@ public class TextPanel : MonoBehaviour
 
         if (finished)
         {
+            duelData.npc.isSpeaking = false;
             if (index >= textToDisplay.Length - 1)
             {
                 this.gameObject.GetComponent<TypeWriterEffect>().finished = false;
@@ -53,6 +54,10 @@ public class TextPanel : MonoBehaviour
             {
                 index++;
                 m_textMeshPro.text = textToDisplay[index];
+                if (m_textMeshPro.text.Equals(textToDisplay[1]) && !duelData.getTurn())
+                {
+                    duelData.npc.isSpeaking = true;
+                }
                 this.gameObject.GetComponent<TypeWriterEffect>().finished = false;
                 this.gameObject.GetComponent<TypeWriterEffect>().StartCoroutine(this.gameObject.GetComponent<TypeWriterEffect>().Start());
             }

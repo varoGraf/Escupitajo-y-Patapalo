@@ -7,17 +7,10 @@ using UnityEngine;
 public class PirateSO : ScriptableObject
 {
     public string pirateName = "Pirate";
-    public List<AnimationClip> animations;
     public Sprite standingSprite, headStandingSprite;
-    public AnimationClip getAnimation(string name)
-    {
-        AnimationClip animationClip = null;
-        foreach (AnimationClip clip in animations)
-        {
-            if (name.Equals(clip.name)) { animationClip = clip; break; }
-        }
-        return animationClip;
-    }
+    public RuntimeAnimatorController anim;
+    public bool isSpeaking = false;
+
     public Sprite GetStandingSprite()
     {
         return standingSprite;

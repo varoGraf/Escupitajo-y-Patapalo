@@ -2,19 +2,19 @@
 	"startingSentences": [
 		{
 			"Insultado": "Parece que ese pirata de pocamonta te va a decir algo y no va a ser bueno.",
-			"Insultador": "¡Ey ese malnacido te ha mirado raro! ¡Que se entere quien manda!"
+			"Insultador": "¡Ey ese malnacido te ha mirado raro! ¡Que se entere de quien manda!"
 		},
 		{
-			"Insultado": "Ese borracho me está mirando, ¿que me querrá decir?",
+			"Insultado": "Ese borracho te está mirando, ¿que te querrá decir?",
 			"Insultador": "Este papanatas se merece que le pongas los pies en su sitio."
 		},
 		{
-			"Insultado": "¿Por qué ese hombre se recoloca la dentadura y se saca un papel? Parece que me quiere decir algo que lleva anotado.",
-			"Insultador": "Que ganas de meterme con algún pirata fracasado. ¡Eh tú te estoy hablando!"
+			"Insultado": "¿Por qué ese hombre se recoloca la dentadura y se saca un papel? Parece que te quiere decir algo que lleva anotado.",
+			"Insultador": "Se te ve con ganas de meterte con algún pirata fracasado. ¡Eh por ahí va uno!"
 		},
 		{
-			"Insultado": "El hedor corporal que desprende ese pirata es digno de reconocimiento. OH DIOS MÍO SE ESTÁ ACERCANDO A MI. NO POR FAVOR.",
-			"Insultador": "Después de un duro día en el bar uno solo tiene ganas de una buena gresca. Ese tipo parece que no puede defenderse, ¡el contrincante perfecto!"
+			"Insultado": "El hedor corporal que desprende ese pirata es digno de reconocimiento. OH DIOS MÍO QUE SE TE ESTÁ ACERCANDO.",
+			"Insultador": "Después de un duro día en el bar parece que solo tengas ganas de una buena gresca. Ese tipo parece que no puede defenderse, ¡el contrincante perfecto!"
 		}
 	]
 }

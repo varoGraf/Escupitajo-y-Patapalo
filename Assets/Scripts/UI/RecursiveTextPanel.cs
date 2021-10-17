@@ -17,8 +17,9 @@ public class RecursiveTextPanel : MonoBehaviour
     {
         m_textMeshPro = gameObject.GetComponent<TextMeshProUGUI>() ?? gameObject.AddComponent<TextMeshProUGUI>();
         currentText = new string[2];
-        currentText[0] = duelData.getPlayerSentence();
+        currentText[0] = "Tú: " + duelData.getPlayerSentence();
         m_textMeshPro.text = currentText[0];
+        duelData.player.isSpeaking = true;
         this.gameObject.GetComponent<TypeWriterEffect>().finished = false;
         this.gameObject.GetComponent<TypeWriterEffect>().StartCoroutine(this.gameObject.GetComponent<TypeWriterEffect>().Start());
         exit = false;
@@ -30,6 +31,8 @@ public class RecursiveTextPanel : MonoBehaviour
         bool finished = this.gameObject.GetComponent<TypeWriterEffect>().finished;
         if (finished)
         {
+            duelData.npc.isSpeaking = false;
+            duelData.player.isSpeaking = false;
             if (exit)
             {
                 menuPanel.SetActive(true);
@@ -43,6 +46,7 @@ public class RecursiveTextPanel : MonoBehaviour
                     duelData.setNPCSentence(duelData.getRandomAnswer());
                     currentText[1] = "Pirata: " + duelData.getNPCSentence();
                     m_textMeshPro.text = currentText[1];
+                    duelData.npc.isSpeaking = true;
                     duelData.playerInsult(duelData.getPlayerSentence(), duelData.getNPCSentence());
                     if (duelData.getTurn()) { exit = true; }
                     else { exit = false; auxBool = true; }
@@ -66,6 +70,7 @@ public class RecursiveTextPanel : MonoBehaviour
                             duelData.setNPCSentence(duelData.getRandomInsult());
                             currentText[1] = "Pirata: " + duelData.getNPCSentence();
                             m_textMeshPro.text = currentText[1];
+                            duelData.npc.isSpeaking = true;
                             exit = true;
                             this.gameObject.GetComponent<TypeWriterEffect>().finished = false;
                             this.gameObject.GetComponent<TypeWriterEffect>().StartCoroutine(this.gameObject.GetComponent<TypeWriterEffect>().Start());
@@ -76,6 +81,7 @@ public class RecursiveTextPanel : MonoBehaviour
                         duelData.setNPCSentence(duelData.getRandomInsult());
                         currentText[1] = "Pirata: " + duelData.getNPCSentence();
                         m_textMeshPro.text = currentText[1];
+                        duelData.npc.isSpeaking = true;
                         exit = true;
                         this.gameObject.GetComponent<TypeWriterEffect>().finished = false;
                         this.gameObject.GetComponent<TypeWriterEffect>().StartCoroutine(this.gameObject.GetComponent<TypeWriterEffect>().Start());
