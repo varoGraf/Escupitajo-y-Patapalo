@@ -1,18 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MenuStartButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public MenuStartController menuButtonController;
+    public Animator animator;
+    public int thisIndex;
+    public UnityEvent onExit, onGoGame;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (menuButtonController.index == thisIndex)
+        {
+            animator.SetBool("selected", true);
+            if (menuButtonController.isPressConfirm)
+            {
+                animator.SetBool("pressed", true);
+                if (this.thisIndex == 0)
+                {
+                    onGoGame.Invoke();
+                }
+                else
+                {
+                    onExit.Invoke();
+                }
+            }
+            else if (animator.GetBool("pressed"))
+            {
+                animator.SetBool("pressed", false);
+            }
+        }
+        else
+        {
+            animator.SetBool("selected", false);
+        }
     }
 }
