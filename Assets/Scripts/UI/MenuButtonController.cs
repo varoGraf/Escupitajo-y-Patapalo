@@ -17,6 +17,7 @@ public class MenuButtonController : MonoBehaviour
     public bool isPressUp, isPressDown, isPressConfirm;
     int VerticalMovement;
     bool turn;
+    public AudioSource audio;
 
     public void Init()
     {
@@ -113,6 +114,7 @@ public class MenuButtonController : MonoBehaviour
                     if (index < maxIndex)
                     {
                         index++;
+                        audio.Play();
                         if (index > 3 && index < maxIndex)
                         {
                             rectTransform.offsetMax -= new Vector2(0, -heightSentence);
@@ -126,6 +128,7 @@ public class MenuButtonController : MonoBehaviour
                     if (index > 0)
                     {
                         index--;
+                        audio.Play();
                         if (index < maxIndex - 1 && index > 2)
                         {
                             rectTransform.offsetMax -= new Vector2(0, heightSentence);

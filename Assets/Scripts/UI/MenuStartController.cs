@@ -9,6 +9,7 @@ public class MenuStartController : MonoBehaviour
     [SerializeField] bool keyDown;
     [SerializeField] RectTransform rectTransform;
     public bool isPressUp, isPressDown, isPressConfirm;
+    public AudioSource audio;
     int VerticalMovement;
 
     void Start()
@@ -70,6 +71,7 @@ public class MenuStartController : MonoBehaviour
                     if (index < maxIndex)
                     {
                         index++;
+                        audio.Play();
                         if (index > 1 && index < maxIndex)
                         {
                             rectTransform.offsetMax -= new Vector2(0, -64);
@@ -83,6 +85,7 @@ public class MenuStartController : MonoBehaviour
                     if (index > 0)
                     {
                         index--;
+                        audio.Play();
                         if (index < maxIndex - 1 && index > 0)
                         {
                             rectTransform.offsetMax -= new Vector2(0, 64);
