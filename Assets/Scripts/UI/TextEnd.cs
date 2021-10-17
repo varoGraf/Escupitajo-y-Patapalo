@@ -22,7 +22,7 @@ public class TextEnd : MonoBehaviour
         }
         if (score.currentScore > 0 && score.currentScore < 150)
         {
-            m_textMeshPro.text = "Todavía no has judado.\n ¿Quieres jugar?";
+            m_textMeshPro.text = "Todavía no has jugado.\n ¿Quieres jugar?";
         }
 
     }
