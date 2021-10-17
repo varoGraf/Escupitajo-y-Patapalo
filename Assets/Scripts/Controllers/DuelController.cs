@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DuelController : MonoBehaviour
 {
     public DuelDataSO duelData;
     public ScoreSO score;
+    public UnityEvent onEndScore;
 
     void Awake()
     {
@@ -17,9 +19,16 @@ public class DuelController : MonoBehaviour
         duelData.Randomize();
     }
 
+    void Update()
+    {
+        if (score.currentScore <= 0 || score.currentScore >= 150)
+        {
+            onEndScore.Invoke();
+        }
+    }
+
     public void increaseScore()
     {
-        Debug.Log("Increased");
         score.increaseScore();
     }
     public void decreaseScore()
