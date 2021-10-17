@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: DuelDataSO
   m_EditorClassIdentifier: 
   duelDataJSON: {fileID: 4900000, guid: 19f7ea2cd2439664295cfc26fa9e5708, type: 3}
+  startingJSON: {fileID: 4900000, guid: c58aa81182b1c484a98eead738af380f, type: 3}
   sentencesInJSON:
     sentences:
     - Insulto: "\xA1He o\xEDdo que eres un sopl\xF3n despreciable!"
@@ -47,6 +48,8 @@ MonoBehaviour:
       Respuesta: "Primero deber\xEDas dejar de usarla como un plumero."
     - Insulto: "\xA1Mi pa\xF1uelo limpiar\xE1 tu sangre!"
       Respuesta: "Ah, \xBFYa has obtenido ese trabajo de barrendero?"
+  startingSentencesJSON:
+    startingSentences: []
   player: {fileID: 11400000, guid: 70cd40ee61e1a5a4bbf97df2ed030477, type: 2}
   npc: {fileID: 11400000, guid: d73f9881a19989443abafb1120db9dee, type: 2}
   onPlayerPoint:

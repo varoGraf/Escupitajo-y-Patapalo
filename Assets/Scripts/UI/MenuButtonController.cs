@@ -18,8 +18,13 @@ public class MenuButtonController : MonoBehaviour
     int VerticalMovement;
     bool turn;
 
-    void Start()
+    public void Init()
     {
+        foreach (Transform child in this.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
+
         rectTransform = GetComponent<RectTransform>();
         isPressUp = isPressDown = isPressConfirm = false;
         sentences = duelData.getSentences();
@@ -47,6 +52,7 @@ public class MenuButtonController : MonoBehaviour
                 gameObject.transform.GetChild(0).GetComponent<TMP_Text>().text = sentences[i].Respuesta;
             }
         }
+
     }
     public void onPressUp()
     {
@@ -86,6 +92,15 @@ public class MenuButtonController : MonoBehaviour
         if (!isPressUp && !isPressDown) VerticalMovement = 0;
         if (Input.GetButtonDown("Space"))
         {
+            if (turn)
+            {
+                duelData.setPlayerSentence(sentences[index].Insulto);
+            }
+            else
+            {
+                duelData.setPlayerSentence(sentences[index].Respuesta);
+            }
+
             isPressConfirm = true;
         }
 
@@ -103,11 +118,6 @@ public class MenuButtonController : MonoBehaviour
                             rectTransform.offsetMax -= new Vector2(0, -heightSentence);
                         }
                     }
-                    /*else
-                    {
-                        index = 0;
-                        rectTransform.offsetMax = Vector2.zero;
-                    }*/
 
                 }
                 else if (Input.GetAxis("Vertical") > 0 || VerticalMovement > 0)
@@ -121,11 +131,6 @@ public class MenuButtonController : MonoBehaviour
                             rectTransform.offsetMax -= new Vector2(0, heightSentence);
                         }
                     }
-                    /*else
-                    {
-                        index = maxIndex;
-                        rectTransform.offsetMax = new Vector2(0, (maxIndex - 2) * heightSentence);
-                    }*/
                 }
 
                 keyDown = true;

@@ -19,8 +19,9 @@ public class MenuButton : MonoBehaviour
                 animator.SetBool("pressed", true);
                 if (menuPanelToOpen != null)
                 {
-                    menuButtonController.gameObject.SetActive(false);
                     menuPanelToOpen.SetActive(true);
+                    menuPanelToOpen.GetComponent<RecursiveTextPanel>().Init();
+                    menuButtonController.gameObject.SetActive(false);
                 }
             }
             else if (animator.GetBool("pressed"))

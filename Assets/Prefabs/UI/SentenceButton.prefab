@@ -76,7 +76,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8658085492579372439}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9acdd14105533b4598f3aba1e9c581b, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c8fc2957bd081a48a1ddcfd6a5d65cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   menuButtonController: {fileID: 0}
