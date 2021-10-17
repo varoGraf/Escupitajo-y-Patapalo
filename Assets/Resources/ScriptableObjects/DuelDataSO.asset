@@ -16,45 +16,84 @@ MonoBehaviour:
   startingJSON: {fileID: 4900000, guid: c58aa81182b1c484a98eead738af380f, type: 3}
   sentencesInJSON:
     sentences:
+    - Insulto: "\xA1Luchas como un ganadero!"
+      Respuesta: "Qu\xE9 apropiado, t\xFA peleas como una vaca."
+    - Insulto: "\xA1Ha llegado tu HORA, palurdo de ocho patas!"
+      Respuesta: "Y yo tengo un SALUDO para ti, \xBFTe enteras?"
+    - Insulto: "\xA1Demasiado bobo para mi nivel de inteligencia!"
+      Respuesta: "Estar\xEDa acabado si la usases alguna vez."
+    - Insulto: "\xBFHas dejado ya de usar pa\xF1ales?"
+      Respuesta: "\xBFPor qu\xE9? \xBFAcaso quer\xEDas pedir uno prestado?"
+    - Insulto: Obtuve esta cicatriz en una batalla a muerte!
+      Respuesta: Espero que ya hayas aprendido a no tocarte la nariz.
+    - Insulto: "\xA1No pienso aguantar tu insolencia aqu\xED sentado!"
+      Respuesta: "Ya te est\xE1n fastidiando otra vez las almorranas, \xBFEh?"
     - Insulto: "\xA1He o\xEDdo que eres un sopl\xF3n despreciable!"
       Respuesta: "Qu\xE9 pena me da que nadie haya o\xEDdo hablar de ti"
     - Insulto: "\xA1Me das ganas de vomitar!"
       Respuesta: Me haces pensar que alguien ya lo ha hecho.
-    - Insulto: "\xA1Nadie me ha sacado sangre jam\xE1s, y nadie lo har\xE1!"
-      Respuesta: "\xBFTAN r\xE1pido corres?"
-    - Insulto: "\xA1He hablado con simios m\xE1s educados que tu!"
-      Respuesta: "Me alegra que asistieras a tu reuni\xF3n familiar diaria."
-    - Insulto: "\xA1Demasiado bobo para mi nivel de inteligencia!"
-      Respuesta: "Estar\xEDa acabado si la usases alguna vez."
-    - Insulto: Obtuve esta cicatriz en una batalla a muerte!
-      Respuesta: Espero que ya hayas aprendido a no tocarte la nariz.
-    - Insulto: "\xBFHas dejado ya de usar pa\xF1ales?"
-      Respuesta: "\xBFPor qu\xE9? \xBFAcaso quer\xEDas pedir uno prestado?"
-    - Insulto: "\xA1Tienes los modales de un mendigo!"
-      Respuesta: "Quer\xEDa asegurarme de que estuvieras a gusto conmigo."
-    - Insulto: "\xA1Ha llegado tu HORA, palurdo de ocho patas!"
-      Respuesta: "Y yo tengo un SALUDO para ti, \xBFTe enteras?"
-    - Insulto: "\xA1No pienso aguantar tu insolencia aqu\xED sentado!"
-      Respuesta: "Ya te est\xE1n fastidiando otra vez las almorranas, \xBFEh?"
     - Insulto: "\xA1Una vez tuve un perro m\xE1s listo que tu!"
       Respuesta: "Te habr\xE1 ense\xF1ado todo lo que sabes."
-    - Insulto: "\xA1No hay palabras para describir lo asqueroso que eres!"
-      Respuesta: "S\xED que las hay, s\xF3lo que nunca las has aprendido."
-    - Insulto: "\xA1La gente cae a mis pies al verme llegar!"
-      Respuesta: "\xBFIncluso antes de que huelan tu aliento?"
-    - Insulto: "\xA1Luchas como un ganadero!"
-      Respuesta: "Qu\xE9 apropiado, t\xFA peleas como una vaca."
+    - Insulto: "\xA1Nadie me ha sacado sangre jam\xE1s, y nadie lo har\xE1!"
+      Respuesta: "\xBFTAN r\xE1pido corres?"
     - Insulto: "\xA1Llevar\xE1s mi espada como si fueras un pincho moruno!"
       Respuesta: "Primero deber\xEDas dejar de usarla como un plumero."
+    - Insulto: "\xA1La gente cae a mis pies al verme llegar!"
+      Respuesta: "\xBFIncluso antes de que huelan tu aliento?"
+    - Insulto: "\xA1Tienes los modales de un mendigo!"
+      Respuesta: "Quer\xEDa asegurarme de que estuvieras a gusto conmigo."
+    - Insulto: "\xA1No hay palabras para describir lo asqueroso que eres!"
+      Respuesta: "S\xED que las hay, s\xF3lo que nunca las has aprendido."
     - Insulto: "\xA1Mi pa\xF1uelo limpiar\xE1 tu sangre!"
       Respuesta: "Ah, \xBFYa has obtenido ese trabajo de barrendero?"
+    - Insulto: "\xA1He hablado con simios m\xE1s educados que tu!"
+      Respuesta: "Me alegra que asistieras a tu reuni\xF3n familiar diaria."
   startingSentencesJSON:
-    startingSentences: []
+    startingSentences:
+    - Insultado: Parece que ese pirata de pocamonta te va a decir algo y no va a
+        ser bueno.
+      Insultador: "\xA1Ey ese malnacido te ha mirado raro! \xA1Que se entere quien
+        manda!"
+    - Insultado: "Ese borracho me est\xE1 mirando, \xBFque me querr\xE1 decir?"
+      Insultador: Este papanatas se merece que le pongas los pies en su sitio.
+    - Insultado: "\xBFPor qu\xE9 ese hombre se recoloca la dentadura y se saca un
+        papel? Parece que me quiere decir algo que lleva anotado."
+      Insultador: "Que ganas de meterme con alg\xFAn pirata fracasado. \xA1Eh t\xFA
+        te estoy hablando!"
+    - Insultado: "El hedor corporal que desprende ese pirata es digno de reconocimiento.
+        OH DIOS M\xCDO SE EST\xC1 ACERCANDO A MI. NO POR FAVOR."
+      Insultador: "Despu\xE9s de un duro d\xEDa en el bar uno solo tiene ganas de
+        una buena gresca. Ese tipo parece que no puede defenderse, \xA1el contrincante
+        perfecto!"
   player: {fileID: 11400000, guid: 70cd40ee61e1a5a4bbf97df2ed030477, type: 2}
   npc: {fileID: 11400000, guid: d73f9881a19989443abafb1120db9dee, type: 2}
   onPlayerPoint:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 00eac078acef08c41a076fd8e69f9a59, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onNPCPoint:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 02c540df621130b4286a8830abe73e45, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

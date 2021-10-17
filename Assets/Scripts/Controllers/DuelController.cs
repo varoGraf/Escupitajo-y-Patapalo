@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class DuelController : MonoBehaviour
 {
-    [SerializeField]
     public DuelDataSO duelData;
-    [SerializeField]
     public ScoreSO score;
 
     void Awake()
@@ -21,6 +19,7 @@ public class DuelController : MonoBehaviour
 
     public void increaseScore()
     {
+        Debug.Log("Increased");
         score.increaseScore();
     }
     public void decreaseScore()

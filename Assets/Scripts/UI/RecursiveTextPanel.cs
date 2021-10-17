@@ -11,6 +11,7 @@ public class RecursiveTextPanel : MonoBehaviour
     private TextMeshProUGUI m_textMeshPro;
     private string[] currentText;
     public UnityEvent onSpace;
+    bool exit, auxBool;
 
     public void Init()
     {
@@ -20,6 +21,8 @@ public class RecursiveTextPanel : MonoBehaviour
         m_textMeshPro.text = currentText[0];
         this.gameObject.GetComponent<TypeWriterEffect>().finished = false;
         this.gameObject.GetComponent<TypeWriterEffect>().StartCoroutine(this.gameObject.GetComponent<TypeWriterEffect>().Start());
+        exit = false;
+        auxBool = false;
     }
 
     public void onSpacePressed()
@@ -27,7 +30,7 @@ public class RecursiveTextPanel : MonoBehaviour
         bool finished = this.gameObject.GetComponent<TypeWriterEffect>().finished;
         if (finished)
         {
-            if (m_textMeshPro.text.Equals(currentText[1]))
+            if (exit)
             {
                 menuPanel.SetActive(true);
                 menuPanel.GetComponent<MenuButtonController>().Init();
@@ -41,24 +44,39 @@ public class RecursiveTextPanel : MonoBehaviour
                     currentText[1] = "Pirata: " + duelData.getNPCSentence();
                     m_textMeshPro.text = currentText[1];
                     duelData.playerInsult(duelData.getPlayerSentence(), duelData.getNPCSentence());
+                    if (duelData.getTurn()) { exit = true; }
+                    else { exit = false; auxBool = true; }
                     this.gameObject.GetComponent<TypeWriterEffect>().finished = false;
                     this.gameObject.GetComponent<TypeWriterEffect>().StartCoroutine(this.gameObject.GetComponent<TypeWriterEffect>().Start());
                 }
                 else
                 {
-                    duelData.npcInsult(duelData.getNPCSentence(), duelData.getPlayerSentence());
-                    if (duelData.getTurn())
+                    if (!auxBool)
                     {
-                        this.gameObject.GetComponent<TypeWriterEffect>().finished = false;
-                        menuPanel.SetActive(true);
-                        menuPanel.GetComponent<MenuButtonController>().Init();
-                        this.gameObject.SetActive(false);
+                        duelData.npcInsult(duelData.getNPCSentence(), duelData.getPlayerSentence());
+                        if (duelData.getTurn())
+                        {
+                            this.gameObject.GetComponent<TypeWriterEffect>().finished = false;
+                            menuPanel.SetActive(true);
+                            menuPanel.GetComponent<MenuButtonController>().Init();
+                            this.gameObject.SetActive(false);
+                        }
+                        else
+                        {
+                            duelData.setNPCSentence(duelData.getRandomInsult());
+                            currentText[1] = "Pirata: " + duelData.getNPCSentence();
+                            m_textMeshPro.text = currentText[1];
+                            exit = true;
+                            this.gameObject.GetComponent<TypeWriterEffect>().finished = false;
+                            this.gameObject.GetComponent<TypeWriterEffect>().StartCoroutine(this.gameObject.GetComponent<TypeWriterEffect>().Start());
+                        }
                     }
                     else
                     {
                         duelData.setNPCSentence(duelData.getRandomInsult());
                         currentText[1] = "Pirata: " + duelData.getNPCSentence();
                         m_textMeshPro.text = currentText[1];
+                        exit = true;
                         this.gameObject.GetComponent<TypeWriterEffect>().finished = false;
                         this.gameObject.GetComponent<TypeWriterEffect>().StartCoroutine(this.gameObject.GetComponent<TypeWriterEffect>().Start());
                     }
